@@ -1,0 +1,4 @@
+node_modules
+.publish
+.vscode
+.DS_Store
