@@ -1,0 +1,40 @@
+header{
+  #areaSelect{
+    width: 145px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 100px;
+    background-color: $dark;
+    color: $light;
+    font-size: 13px;
+    padding: 0 16px;
+    appearance: none;
+    position: relative;
+    
+    @include  lg(){
+      width: 130px;      
+    }
+    + i{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 18px;
+      color: $light;
+      font-size: 12px;
+    }
+  }
+  .bikeLane-laneName{
+    display: none;
+  }
+}
+.bikeLane-main{
+  height: calc(100vh - 64px);
+  overflow-y: scroll;
+  .container{
+    padding: 24px 24px;
+  }
+  #map{
+    height: calc(100vh - 64px);
+    display: none;
+  }
+}

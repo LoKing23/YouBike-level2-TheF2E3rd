@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Where's YouBike</title>
+  <link rel="stylesheet" href="./Asset/style/dist/style/all.min.css">
+  <!-- fontAwesome -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css' integrity='sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==' crossorigin='anonymous'/>
+  <!-- axios  -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.9.1/axios.min.js' integrity='sha512-Xk3wWei2TGrsh9kDSBKUMIjw/86sLUvhtnv9f7fOuIwhhiUTKz8szkWkzHthrM5Bb3Bu9idSzkxOrkzhcneuiw==' crossorigin='anonymous'></script>
+</head>
+<body>  
+  <header class="bg-primary">
+    <a href="./index.html" class="frontPageLink">
+      <i class="fas fa-chevron-left"></i>
+      <img src="./Asset/picture/Logo .png" alt="Where's YouBike">
+    </a>
+    <span class="bikeLane-laneName">
+      
+    </span>
+    <div class="position-relative">
+      <select name="選擇縣市" id="areaSelect">
+        <option>選擇縣市</option>
+        <option value="Taipei">臺北市</option>
+        <option value="NewTaipei">新北市</option>
+      </select>
+      <i class="fas fa-caret-down"></i>
+    </div>
+  </header>
+
+  <main class="bikeLane">
+    <div class="container">
+      <ul class="cardArea">
+        
+        <li>
+          <div class="card">
+            <div class="card-text">
+              <h2>上林社區休閒車道</h2>
+              <p>單向0.27公里</p>
+            </div>
+            <div class="card-location">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>新竹縣 關西鎮</span>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </main>
+</body>
+</html>

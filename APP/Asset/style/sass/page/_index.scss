@@ -1,3 +1,67 @@
-h1{
-  color: $primary;
+.indexWrap{
+  height: 100vh;
+  width: 245px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 143px;
+  padding-bottom: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include  md(){
+   width: 386px;      
+  }
+  @include  lg(){
+    width: 245px;      
+  }
+  h2{
+    width: 245px;
+    height: 48px;
+    text-align: center;
+    border: 2px solid $dark;
+    border-radius: 10px;
+    @include  md(){
+     width: 386px;     
+     height: 55px;
+    }
+    @include  lg(){
+      width: 245px;
+      height: 48px;     
+    }
+    a{
+      display: block;
+      line-height: 48px;
+      @include  md(){
+       line-height: 55px;      
+      }
+      @include  lg(){
+        line-height: 48px;      
+      }
+    }
+  }
+  h2 + h2{
+    margin-top: 18px;
+    @include  md(){
+     margin-top: 22px;      
+    }
+    @include  lg(){
+     margin-top: 18px;      
+    }
+  }
+}
+.copyright{
+  width: 365px;
+  text-align: center;
+  display: block;
+  font-size: 12px;
+  position: absolute;
+  bottom: 16px;
+  right: 50%;
+  transform: translateX(50%);
+  @include  lg(){
+    width: 400px;
+    bottom: 20px;
+    right: 0px;
+    transform: none;
+  }
 }

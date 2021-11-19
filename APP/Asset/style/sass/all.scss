@@ -1,6 +1,10 @@
+//helper
+@import 'helper/mixin';
+@import 'helper/bootstrap';
 //base
 @import 'base/reset';
 @import 'base/base';
-@import 'base/variable';
 //page
-@import 'page/index.scss'
+@import 'page/index';
+@import 'page/YouBike';
+@import 'page/bicycleLane';

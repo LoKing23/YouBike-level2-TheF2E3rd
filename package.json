@@ -1,0 +1,26 @@
+{
+  "name": "bike",
+  "version": "1.0.0",
+  "description": "The F2E自行車",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LoKing23/YouBike-level2-TheF2E3rd.git"
+  },
+  "keywords": [
+    "TheF2E",
+    "YouBike"
+  ],
+  "author": "LoKing",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LoKing23/YouBike-level2-TheF2E3rd/issues"
+  },
+  "homepage": "https://github.com/LoKing23/YouBike-level2-TheF2E3rd#readme",
+  "dependencies": {
+    "bootstrap": "^5.0.0"
+  }
+}

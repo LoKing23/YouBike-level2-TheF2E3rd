@@ -1,0 +1,237 @@
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 0 16px;
+  height: 64px;
+  @include  lg(){
+    padding: 0 90px;      
+  }
+  .frontPageLink{
+    i{
+      font-size: 20px;
+      vertical-align: bottom;
+      @include  lg(){
+        display: none;      
+      }
+    }
+    img{
+      display: none;
+      width: 225px;
+      @include  lg(){
+        display: block;      
+      }
+    }
+  }
+  
+  .toggleLane{
+    #toggleBikeLane{
+      opacity: 0;
+      position: absolute;
+    }
+    #toggleBikeLane:checked ~ label{
+      background-color: $light;
+      justify-content: flex-end;
+      &::before{
+        margin-right: 78px;
+        background-color: $dark;
+      }
+      & span:first-child{
+        opacity: 0;
+        position: absolute;
+      }
+      & span:last-child{
+        opacity: 1;
+        position: relative;
+      }
+    }
+    label{
+      cursor: pointer;
+      height: 30px;
+      width: 105px;
+      border-radius: 300px;
+      background-color: $dark;
+      color: $light;
+  
+      position: relative;
+      display: flex;
+      padding: 0 12px;
+      &::before{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 23px;
+        height: 23px;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-right: 5px;
+        border-radius: 50%;
+        background-color: $light;
+        transition: all .1s;
+      }
+      span{
+        font-size: 13px;
+        line-height: 30px;
+        transition: opacity 1.5s cubic-bezier(0, 0, 0, 5);
+        &:last-child{
+          color: $dark;
+          opacity: 0;
+          position: absolute;
+        }
+      }
+    }
+  }
+}
+header .rentBackArea{
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 276px;
+  height: 42px;
+  line-height: 42px;
+
+  background-color: $light;
+  color: $dark;
+  border-radius: 100px;
+
+  display: flex;
+  justify-content: space-between;
+  input[type="radio"]{
+    display: none;
+  }
+  label{
+    cursor: pointer;
+    width: 138px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    padding-left: 32px;
+    i{
+      margin-right: 10px;
+    }
+    &:first-child{
+     padding-left: 32px;
+    }
+    &:last-child{
+      justify-content: flex-end;
+      padding-right: 32px;
+    }
+  }
+  input[type="radio"]:checked + label{
+    background-color: $dark;
+    color: $primary;
+  }
+
+  @include  lg(){
+    opacity: 1;     
+  }
+}
+
+.mapArea{
+  height: calc(100vh - 120px);
+  position: relative;
+  @include  lg(){
+    height: calc(100vh - 64px);      
+   }
+  #map{
+    height: calc(100vh - 120px);
+    position: relative;
+    z-index: 0;
+    @include  lg(){
+      height: calc(100vh - 64px);      
+     }
+  } 
+  .gps{
+    cursor: pointer;
+    text-align: center;
+    color: $light;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background-color: $dark;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    right: 16px;
+    bottom: 24px;
+    i{
+      width: 24px;
+      height: 24px;
+      margin-bottom: 6px;
+    }
+    span{
+      font-size: 12px;
+    }
+  }
+  .search{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    input{
+      width: 255px;
+      padding: 10px 17px;
+      box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 8px; 
+      margin-right: 6px;
+    }
+    input::placeholder{
+      color: gray_light;
+    }
+    i{
+      cursor: pointer;
+      display: inline-block;
+      text-align: center;
+      width: 44px;
+      height: 44px;
+      line-height: 44px;
+      box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      font-size: 24px;
+      background-color: $dark;
+      color: $light;
+    }
+  }
+}
+nav.rentBackArea{
+  height: 56px;
+  label{
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    color: $light;
+    width: 48%;
+    line-height: 56px;
+  }
+  input[type="radio"]{
+    opacity: 0;
+    position: absolute;
+  }
+  input[type="radio"]:checked + label{
+    color: $dark;
+  }
+  i{
+    margin-right: 12px;
+  }
+  i:first-child{
+    width: 32px;
+    height: 32px;
+  }
+  i:nth-child(2){
+    width: 24px;
+    height: 24px;
+  }
+  @include  lg(){
+   display: none;      
+  }
+}
