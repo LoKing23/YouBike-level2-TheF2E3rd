@@ -4538,6 +4538,11 @@
   }
 }
 
+#ani-youbike {
+  width: 177px;
+  height: 100px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -4591,6 +4596,15 @@ a {
 @media screen and (min-width: 1280px) {
   .indexWrap {
     width: 245px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .indexWrap div + div {
+    margin-top: 50%;
   }
 }
 
@@ -5038,16 +5052,95 @@ header .bikeLane-laneName {
   display: none;
 }
 
-.bikeLane-main {
+.bikeLane {
   height: calc(100vh - 64px);
   overflow-y: scroll;
 }
 
-.bikeLane-main .container {
-  padding: 24px 24px;
+.bikeLane .container {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 24px 25px;
 }
 
-.bikeLane-main #map {
+@media screen and (min-width: 768px) {
+  .bikeLane .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.bikeLane #map {
   height: calc(100vh - 64px);
   display: none;
+}
+
+.bikeLane .cardArea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.bikeLane .cardArea .card {
+  padding: 12px;
+  width: 100%;
+  -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .bikeLane .cardArea .card {
+    width: 48%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .bikeLane .cardArea .card {
+    width: 32%;
+  }
+}
+
+.bikeLane .cardArea .card h2 {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.bikeLane .cardArea .card .card-bottom {
+  font-size: 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #7A7A7A;
+}
+
+.bikeLane .cardArea .card .card-bottom i {
+  color: #FED801;
+  margin-right: 7px;
+}
+
+@media screen and (min-width: 768px) {
+  .bikeLane .cardArea .card:nth-child(even) {
+    margin-left: 12px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .bikeLane .cardArea .card:nth-child(even) {
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .bikeLane .cardArea .card:nth-child(3n + 2), .bikeLane .cardArea .card:nth-child(3n+3) {
+    margin-left: 8px;
+  }
 }

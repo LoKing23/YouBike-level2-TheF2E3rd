@@ -17,6 +17,8 @@
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
   crossorigin=""></script>
+  <!-- jsSHA  -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jsSHA/3.2.0/sha.min.js' integrity='sha512-/yIGjYJZIXZx10ig0yhbK41OiwcqBUxIj0xQJe+NwkMIdS/u07b6Mwo0nvXB4o7A6WiKnKOf92JwE5Ezo27u9Q==' crossorigin='anonymous'></script>
 </head>
 
 
@@ -79,18 +81,7 @@
   </nav>
 
 
-
-
-  <script>
-    let map = L.map('map').setView([25.1441059,121.4626735], 16);
-    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-    maxZoom: 18,
-    id: 'mapbox/streets-v9',
-    tileSize: 512,
-    zoomOffset: -1,
-    accessToken: 'pk.eyJ1IjoibG9raW5nIiwiYSI6ImNrdzByZW9ydDFwYTIybnQzY2lmdHY0eG8ifQ.ZC0nThgW4arcAdKa5HTLmw'
-}).addTo(map);
-  </script>
+  
+  <script type="module" src="./Asset/js/all.js"></script>
 </body>
 </html>

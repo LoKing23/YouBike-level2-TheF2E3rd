@@ -27,14 +27,66 @@ header{
     display: none;
   }
 }
-.bikeLane-main{
+.bikeLane{
   height: calc(100vh - 64px);
   overflow-y: scroll;
   .container{
-    padding: 24px 24px;
+   max-width: 1100px;
+   margin-left: auto;
+   margin-right: auto;
+  padding: 24px 25px;
+   @include  md(){
+    padding-left: 16px;
+    padding-right: 16px;
+   }
   }
   #map{
     height: calc(100vh - 64px);
     display: none;
+  }
+  .cardArea{
+    display: flex;
+    flex-wrap: wrap;
+    .card{
+      padding: 12px;
+      width: 100%;
+      box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 6px;
+      margin-bottom: 8px;
+      @include  md(){
+        width: 48%;
+      }
+      @include  lg(){
+        width: 32%;      
+      }
+      h2{
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 12px;
+      }
+      .card-bottom{
+        font-size: 13px;
+        display: flex;
+        justify-content: space-between;
+        color: $gray-mine;
+        i{
+          color: $primary;
+          margin-right: 7px;
+        }
+      }
+    }
+    .card:nth-child(even){
+      @include  md(){
+        margin-left: 12px;
+      }
+      @include  lg(){
+        margin-left: 0;      
+      }
+    }
+    .card:nth-child(3n + 2), .card:nth-child(3n+3){
+      @include  lg(){
+        margin-left: 8px;
+      }
+    }
   }
 }

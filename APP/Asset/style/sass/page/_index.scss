@@ -12,7 +12,13 @@
    width: 386px;      
   }
   @include  lg(){
-    width: 245px;      
+    width: 245px;     
+    justify-content: flex-start; 
+  }
+  div + div{
+    @include  lg(){
+      margin-top: 50%;      
+    }
   }
   h2{
     width: 245px;

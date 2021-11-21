@@ -10,12 +10,14 @@
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css' integrity='sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==' crossorigin='anonymous'/>
   <!-- axios  -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.9.1/axios.min.js' integrity='sha512-Xk3wWei2TGrsh9kDSBKUMIjw/86sLUvhtnv9f7fOuIwhhiUTKz8szkWkzHthrM5Bb3Bu9idSzkxOrkzhcneuiw==' crossorigin='anonymous'></script>
+  <!-- bodymovin  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.8.1/lottie.min.js"></script>
 </head>
 <body>
   <div class="bg-primary">
     <div class="indexWrap">
       <div>
-        <img src="./Asset/picture/bike.png" alt="腳踏車LOGO" class="logo">
+        <div id="ani-youbike"></div>
         <h1>
           <img src="./Asset/picture/Logo .png" alt="Where's YouBike"> <br>
           <span>微 笑 單 車 ， 暢 遊 城 市</span>
@@ -29,5 +31,16 @@
       <span class="copyright">Where’s YouBike  © Code: LoKing  /  Design: KT</span>
     </div>
   </div>
+  <script type="module" src="./Asset/js/all.js"></script>
+  <script>
+     // LOGO動畫
+    let ani_logo = lottie.loadAnimation({
+      container: document.querySelector('#ani-youbike'), // the dom element that will contain the animation
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'Asset/js/youbike.json'
+    });
+  </script>
 </body>
 </html>
